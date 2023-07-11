@@ -1,0 +1,70 @@
+//Day1 TASK-Ques2
+//write a blog about objects and its internal representation in javascript
+
+Objects are important data types in javascript.
+Objects are different than primitive datatypes (i.e. number, string, boolean, etc.).
+Primitive data types contain one value but Objects can hold many values in form of Key: value pair.
+These keys can be variables or functions and are called properties and methods,
+ respectively, in the context of an object.
+
+Every object has some property associated with some value. 
+These values can be accessed using these properties associated with them.
+
+var myCar = new Object();
+
+myCar.make = 'MAHINDRA ';
+
+myCar.model = 'XUV';
+
+myCar.year = 2011;
+
+myCar.wheels = 4;
+
+After creating myCar object, the value inside the object can be accessed using keys.
+
+i.e.
+
+myCar.year
+
+Output: 2011
+
+These values can be accessed using brackets notation also.
+
+myCar[year]
+
+Output: 2011
+
+The syntax for adding a property to an object is :
+
+ObjectName.ObjectProperty = propertyValue;
+
+So, conclusion and simple definition for Java Script properties is
+ “Properties are the values associated with a JavaScript object”
+
+Object Methods
+ An object method is an object property containing a function definition
+ i.e.,
+
+Let’s assume to start the car there will be a mechanical functionality
+and so similar is to stop/brake/headlights on & off, etc.
+So, conclusion and simple definition for Java Script Object methods is
+ “Methods are actions that can be performed on objects.”
+ function(){return ignition.on}
+
+Create JavaScript Object with Constructor
+ Constructor is nothing but a function and with help of new keyword, 
+ constructor function allows to create multiple objects of same flavor as shown below
+ function Vehicle(name, maker) {
+   this.name = name;
+   this.maker = maker;
+}
+let car1 = new Vehicle(’Fiesta’, 'Ford’);
+console.log(car1.name); o/p 'Ford'
+
+OBJECT EXAMPLE:
+The following example also creates a new JavaScript object with four properties:
+var person = new Object();
+person.firstName = “Thiru”;
+person.lastName = “wissen”;
+person.age = 28;
+person.eyeColor = “black”

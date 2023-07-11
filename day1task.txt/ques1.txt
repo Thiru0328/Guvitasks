@@ -1,0 +1,56 @@
+//Name:- Thirugnanam K
+//DAY1 TASK - Ques1
+//Write a blog on Difference between HTTP1.1 vs HTTP2
+
+
+DIFFERENCE BETWEEN HTTP/1.1 &HTTP/2
+
+                     HTTP stands for hypertext transfer protocol & it is used in client-server communication.
+ By using HTTP user sends the request to the server & the server sends the response to the user.
+There are several stages of development of HTTP but we will focus mainly on HTTP/1.1 which was created in 1997 
+& the new one is HTTP/2 which was created in 2015.
+
+HTTP/1.1:
+
+ For better understanding, let’s assume the situation when you make a request to the server for the profile.html page 
+ & server responds to you as a resource profile.html page. 
+Before sending the request and the response there is a TCP connection established between client & server. 
+Again you make a request to the server for image img.jpg & the server gives a response as an image img.jpg. 
+The connection was not lost here after the first request because we add a keep-alive header
+which is the part of the request so there is an open connection between the server & client. 
+There is a persistent connection which means several requests & responses are merged in a single connection.
+These are the drawbacks that lead to the creation of HTTP/2: 
+The first problem is HTTP/1.1 transfer all the requests & responses in the plain text message form.
+The second one is head of line blocking in which TCP connection is blocked all other requests 
+until the response does not receive.
+All the information related to the header file is repeated in every request.
+
+HTTP/2:
+
+ HTTP/2 was developed over the SPDY protocol. 
+HTTP/2 works on the binary framing layer instead of textual that converts all the messages in binary format.
+It works on fully multiplexed that is one TCP connection is used for multiple requests.
+HTTP/2 uses HPACK which is used to split data from header. it compresses the header.
+The server sends all the other files like CSS & JS without the request of the client using the PUSH frame.
+In HTTP/2, the binary framing layer encodes requests/responses and cuts them up into smaller packets of information,
+greatly increasing the flexibility of data transfer.
+As opposed to HTTP/1.1, which must make use of multiple TCP connections to lessen the effect of HOL blocking,
+HTTP/2 establishes a single connection object between the two machines.
+Within this connection there are multiple streams of data.
+Each stream consists of multiple messages in the familiar request/response format.
+Finally, each of these messages split into smaller units called frames.
+
+
+Difference between HTTP/1.1 & HTTP/2
+HTTP/1.1
+It works on the textual format.
+There is head of line blocking that blocks all the requests behind it until it doesn’t get its all resources.
+It uses requests resource Inlining for use getting multiple pages
+It compresses data by itself.
+
+
+HTTP/2
+It works on the binary protocol.
+It allows multiplexing so one TCP connection is required for multiple requests.
+It uses PUSH frame by server that collects all multiple pages 
+It uses HPACK for data compression.
