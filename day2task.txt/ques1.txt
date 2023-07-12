@@ -1,0 +1,53 @@
+// Name: THIRUGNANAM K
+// Day2 - Ques1
+write a blog on the Difference between Document and Window Objects
+
+THE DOCUMENT OBJECT
+When an HTML document is loaded into a web browser, it becomes a document object.
+
+The document object is the root node of the HTML document.
+
+The document object is a property of the window object and it is the child for window object
+
+By accessing the document object, we can access the element in the HTML page.
+ 
+With the help of document objects, we can add dynamic content to our web page.
+
+The document object is accessed with:
+
+eg:- window.document or just document
+
+
+The following properties and methods can be used on HTML documents:
+
+activeElement	-Returns the currently focused element in the document
+addEventListener()	-Attaches an event handler to the document
+adoptNode()	-Adopts a node from another document
+baseURI -	Returns the absolute base URI of a document
+body-	Sets or returns the document's body (the <body> element)
+head-	Returns the <head> element of the document
+images-	Returns a collection of all <img> elements in the document
+implementation-	Returns the DOMImplementation object that handles this document
+importNode()-	Imports a node from another document
+getElementById()-	Returns the element that has the ID attribute with the specified value
+
+
+WINDOW OBJECT
+
+The window object represents an open window in a browser.
+
+If a document contain frames (<iframe> tags), the browser creates one window object for the HTML document,
+ and one additional window object for each frame.
+
+ The window object is the topmost object of the DOM hierarchy.
+
+ eg:- window.property_name;
+
+ The properties of Window objects that are commonly used are listed in the below:-
+
+ Closed- It holds a Boolean value that represents whether the window is closed or not.
+ console- It returns a reference to the console object 
+ which provides access to the browser’s debugging console.
+ History- It provides information on the URLs visited in the current window
+ Screen-Returns the Screen object for the window See also The Screen object
+ localStorage-Allows to save key/value pairs in a web browser. Stores the data with no expiration date
