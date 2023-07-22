@@ -31,24 +31,30 @@ myFunc= () => {
 
 //2)Convert all the strings to title caps in a string array
 //Anonymous func-
-//let str = ["Hi guvi"];
-/*(function() {
-    str = str.split(' ');
-    for (var i = 0; i < str.length; i++) {
-      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
-    }
-    return str.join(' ');
-  }
-  )("Hi guvi");   
-//IIFE
-                  (function(str) {
-                    str = str.toLowerCase().split(' ');
-                    for (var i = 0; i < str.length; i++) {
-                      str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
-                    }
-                    return str.join(' ');
-                  }
-                  )("Hi guvi");               
+   (function() {
+	var str = ['Hi guvi'];
+	var string = str.join(' ').toUpperCase();
+	console.log(string);
+})
+();
+  
+//IIFE       
+ (function() {
+	var str = ['Hi guvi'];
+	var string = str.join(' ').toUpperCase();
+	console.log(string);
+})
+();
+      
+//arrow func
+let uppercase= ()=> {
+	var str = ['Hi guvi'];
+	var string = str.join(' ').toUpperCase();
+	return(string);
+}
+let r2=uppercase();
+console.log(r2);
+    
 
 //3)Sum of all numbers in an array 
 //anonymous func-              
@@ -60,7 +66,7 @@ let result2=(function(){
        sum = sum + values[i];
      }
      return sum;
-  })
+  })()
 
   console.log(result2);
 
@@ -87,7 +93,7 @@ let res1=() => {
   }
 let sr1= res1();
   console.log(sr1);
-/*
+
  //4)Return all the prime numbers in an array
  var numbers = [1,2,3,4,5,6,7,8,9,10];
  //Anonymous Function
@@ -137,7 +143,7 @@ var numbers = [1,2,3,4,5,6,7,8,9,10];
 
 // Arrow func-
 
-(function(){
+let prime=()=>{
     const filteredValues = numbers.filter((num) => {
         // prime number logic
         // num -> 1;  -> 1%2, 1%3, 1%4
@@ -153,21 +159,23 @@ var numbers = [1,2,3,4,5,6,7,8,9,10];
         }
         return num > 1;
 
-    });
-
+    })
     console.log(filteredValues);
-})();
+    
+};
+let r4=prime();
+
+console.log(r4);
 
 //5)  Return all the palindromes in an array
-
 //Anonymous func-
 function checkPalindrome() {
 
     // find the length of a string
-    const len = string.length;
+    //const len = string.length;
 
     // loop through half of the string
-    for (let i = 0; i < len / 2; i++) {
+    for (let i = 0; i < string.length / 2; i++) {
 
         // check if first and last string are same
         if (string[i] !== string[len - 1 - i]) {
@@ -188,10 +196,10 @@ console.log(value);
 function checkPalindrome() {
 
     // find the length of a string
-    const len = string1.length;
+   // const len = string1.length;
 
     // loop through half of the string
-    for (let i = 0; i < len / 2; i++) {
+    for (let i = 0; i < string1.length / 2; i++) {
 
         // check if first and last string are same
         if (string1[i] !== string1[len - 1 - i]) {
@@ -213,10 +221,10 @@ console.log(value);
 function checkPalindrome() {
 
     // find the length of a string
-    const len = strings.length;
+    //const len = strings.length;
 
     // loop through half of the string
-    for (let i = 0; i < len / 2; i++) {
+    for (let i = 0; i < strings.length / 2; i++) {
 
         // check if first and last string are same
         if (strings[i] !== strings[len - 1 - i]) {
@@ -274,7 +282,7 @@ console.log(result6);
 //anonymous func
 let arr= [1,2,3,4,6,7];
   let numberOfShifts=2;
-var rotate = (function (arr, numberOfShifts) {
+var rotate = (arr, numberOfShifts) =>{ 
     let tmp = 0;
     const leng = arr.length;
     numberOfShifts = numberOfShifts % leng;
@@ -283,10 +291,11 @@ var rotate = (function (arr, numberOfShifts) {
        arr.unshift(tmp);
     }
    return arr;
-  });
+  };
+  console.log(rotate);
 
 //IIFE
-  var rotate = (function (arr, numberOfShifts) {
+  var rotate = (arr, numberOfShifts)=> {
     let tmp = 0;
     const leng = arr.length;
     numberOfShifts = numberOfShifts % leng;
@@ -295,5 +304,5 @@ var rotate = (function (arr, numberOfShifts) {
        arr.unshift(tmp);
     }
    return arr;
-  });
-  */
+  };
+  console.log(rotate);
