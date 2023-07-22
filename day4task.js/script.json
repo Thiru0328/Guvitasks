@@ -1,0 +1,58 @@
+
+{
+    "BIODATA": {
+      "Name": " THIRUGNANAM K",
+      "Email": "gnanamkthiru@gamil.com",
+      "Phone": "8*******15",
+      "Degree": "B.E",
+      "Location": {
+        "Address": "kallidaikurichi,Tirunelveli dt",
+        "PostalCode": "627416",
+        "City": "Tirunelveli",
+        "State": "Tamilnadu",
+        "Country": "India"
+      },
+      "PROFILE": [
+        {
+          "github":"https://github.com/Thiru0328"
+        }
+      ]
+    },
+    "WORK": [
+      {
+        "Company": "ZOHO technologies pvt ltd,Mathalamparai(Contract basis)",
+        "Position": "Safety Engineer",
+        "DOJ": "03-02-2020",
+        "At present": "Working",
+        "Summary":"Identify the hazards and rectify that;before incident will happen and weekly fire safety training"
+        }
+],
+    "EDUCATION": [
+      {
+        "Institution": "University college of engineering, Ariyalur",
+        "Department": "Mechanical",
+        "StudyType": "Fulltime",
+        "Batch start year": "2013",
+        "Batch end year": "2017",
+        "GPA": "7.5"
+      }
+    ],
+    "SKILLS": [
+      {
+        "Name": "javascript",
+        "Level": "beginner"
+      }
+    ],
+    "LANGUAGES": [
+      {
+        "Language": "Tamil,English"
+      }
+    ],
+    "Interests": [
+      {
+        "name": "sports"
+      }
+    ]
+  }
+  
+  

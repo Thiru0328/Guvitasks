@@ -19,19 +19,20 @@ let res=[1,2,3,4,5,6];
                    }
                   })();
 //Arrow func-
-var result=(function() => {
+myFunc= () => {
    for(i=0; i<res.length; i++){
                         if(res[i]%2 !==0){
                            return(res[i])
                         } 
                    }
                   }
-                  )(console.log(result));
+                  let arrw1= myFunc();
+                console.log(arrw1);
 
 //2)Convert all the strings to title caps in a string array
 //Anonymous func-
 //let str = ["Hi guvi"];
-(function() {
+/*(function() {
     str = str.split(' ');
     for (var i = 0; i < str.length; i++) {
       str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
@@ -59,7 +60,8 @@ let result2=(function(){
        sum = sum + values[i];
      }
      return sum;
-  })();
+  })
+
   console.log(result2);
 
   
@@ -74,13 +76,18 @@ let result3=(function(){
   console.log(result3);
 
 //Arrow func
-const result4 = values.reduce((accumulator, currentValue) =>  {
-    return accumulator + currentValue
-});
 
-// values.reduce(function());
-console.log('Sum: ', result4);
-
+//let values = [2, 4, 5, 6 ,7 ,8];
+let res1=() => {
+    var sum = 0;
+    for(var i = 0 ; i< values.length ; i++){
+       sum = sum + values[i];
+     }
+     return sum;
+  }
+let sr1= res1();
+  console.log(sr1);
+/*
  //4)Return all the prime numbers in an array
  var numbers = [1,2,3,4,5,6,7,8,9,10];
  //Anonymous Function
@@ -289,4 +296,4 @@ var rotate = (function (arr, numberOfShifts) {
     }
    return arr;
   });
-  
+  */
