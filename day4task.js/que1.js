@@ -66,8 +66,8 @@ for (let x of myDetails[i]) {
 numbers.forEach((value) => {
     console.log('Value inside ForEach: ', value*2)
 });
-
-myDetails.forEach(() =>{
-    console.log('key inside ForEach: ', myDetails["name"])
+const keys= Object.keys(myDetails);
+keys.forEach((key) =>{
+    console.log('myDetails: ', myDetails[key])
 });
 
