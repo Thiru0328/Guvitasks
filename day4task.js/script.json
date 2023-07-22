@@ -48,9 +48,9 @@
         "Language": "Tamil,English"
       }
     ],
-    "Interests": [
+    "INTERESTS": [
       {
-        "name": "sports"
+        "Area of interests": "sports like cricket and shuttle"
       }
     ]
   }
