@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+</head>
+<body>
+    <h1>Rest countries data</h1>
+    <script>
+        var http= new XMLHttpRequest();
+        //SENDING REQUEST TO THE API
+        http.open("GET","https://restcountries.com/v3.1/all");
+        http.send();
+
+        //GETTING RESPONSE OR ERROR FROM THE API
+        http.onload = () => {
+        if(http.status===200) {
+            var restcountries=JSON.parse(http.response);
+            console.log(restcountries);
+
+            <!-- 1.ques A -->
+              
+                const countriesInAsia= restcountries.filter((country)=>{
+                if (country.region==="Asia"){
+                    return true;
+                }
+            }); console.log("countries in Asia:", countriesInAsia);
+        
+            //ques B
+         const Totalpopulation = restcountries.filter((country)=>{
+            if(country.population< 200000){
+                return true;
+            }
+        }); console.log("Total population:",Totalpopulation);
+
+        //ques C
+        /*restcountries.forEach((country) => {
+            console.log("Name: ", country.name.official);
+            console.log("Capital: ", country.capital[0]);
+            /*country.capital.forEach((cap) => {
+              console.log("Capital: ", cap);
+            });
+            console.log("Flag: ", country.flag);
+          });*/
+
+          //ques D
+
+         // const keys= Object.keys(restcountries);
+          const Allcountrypopulation  = restcountries.reduce((accumulator,country)=>{
+            return accumulator + country.population;
+          }); console.log("TOTAL POPULATION:", Allcountrypopulation);
+          
+          //ques E
+  const keys = Object.keys(restcountries);
+          restcountries.filter((keys) => {
+            if (key.currencies=== "$"){
+                console.log("US dollars countries:", key.currencies);
+            } 
+          }); 
+    }
+      else{
+            console.log("ERROR");
+        }
+        }
+    
+    </script>
+    
+</body>
+</html>
