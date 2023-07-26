@@ -1,0 +1,81 @@
+<!-- Design a contact us form with all fields as required.-->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>document</title>
+        <script>
+            function handleformsubmit(event){
+                event.preventDefault();
+                let Firstname= document.getElementById("Firstname").value
+                let Lastname= document.getElementById("Lastname").value
+                let Email= document.getElementById("Email").value
+                let Mobilenumber= document.getElementById("Mobilenumber").value
+                let Subject= document.getElementById("Subject").value
+                let userDetails ={
+                    Firstname,
+                    Lastname,
+                    Email,
+                    Mobilenumber,
+                    Subject,
+                };
+                console.log("contact us:", userDetails);
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1> Contact us:</h1>
+            <form onsubmit = "handleformsubmit(event)">
+                
+                <div>
+                    <label> Firstname: </label>
+                <div> <input
+                id ="name"
+            type="text"
+        place holder= "enter your Firstname"/>
+    </div> </div>
+         
+    <div>
+        <label> Lastname: </label>
+    <div> <input
+    id ="name"
+type="text"
+place holder= "enter your Lastname"/>
+</div> </div>
+
+<div>
+    <label> Email: </label>
+<div> <input
+id ="email"
+type="email"
+place holder= "enter your Email"/>
+</div> </div>
+
+<div>
+    <label> Mobilenumber: </label>
+<div> <input
+id ="mobilenumber"
+type="number"
+place holder= "enter your mobilenumber"/>
+</div> </div>
+
+
+<div>
+    <label> Subject: </label>
+<div> <input
+id ="subject"
+type="text"
+place holder= "write something"
+style="height:150px; width:160px"/>
+</div> </div>
+
+<div>
+<button type="submit"> SUBMIT </button>
+</div>
+</form>
+</div>
+
+</body>
+</html>

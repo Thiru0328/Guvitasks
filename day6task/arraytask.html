@@ -1,3 +1,6 @@
+<!--THIRUGNANAM K
+DAY6 TASK-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +22,7 @@
             var restcountries=JSON.parse(http.response);
             console.log(restcountries);
 
-            <!-- 1.ques A -->
+             //1.ques A 
               
                 const countriesInAsia= restcountries.filter((country)=>{
                 if (country.region==="Asia"){
@@ -35,36 +38,36 @@
         }); console.log("Total population:",Totalpopulation);
 
         //ques C
-        /*restcountries.forEach((country) => {
+        restcountries.forEach((country) => {
             console.log("Name: ", country.name.official);
-            console.log("Capital: ", country.capital[0]);
+            console.log("Capital: ", country.capital);
             /*country.capital.forEach((cap) => {
               console.log("Capital: ", cap);
-            });
+            });*/
             console.log("Flag: ", country.flag);
-          });*/
+          });
 
           //ques D
-
-         // const keys= Object.keys(restcountries);
           const Allcountrypopulation  = restcountries.reduce((accumulator,country)=>{
             return accumulator + country.population;
-          }); console.log("TOTAL POPULATION:", Allcountrypopulation);
+          },0); console.log("TOTAL POPULATION:", Allcountrypopulation);
           
           //ques E
-  const keys = Object.keys(restcountries);
-          restcountries.filter((keys) => {
-            if (key.currencies=== "$"){
-                console.log("US dollars countries:", key.currencies);
-            } 
-          }); 
-    }
-      else{
+         
+         const USdollars= restcountries.filter((country)=>{
+                if (country.currencies.USD ==="USD"){
+                    return true;
+                }
+            }); console.log("USdollars countries:", USdollars);
+
+    }else{
             console.log("ERROR");
         }
         }
+        
     
     </script>
     
 </body>
+
 </html>

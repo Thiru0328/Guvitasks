@@ -1,0 +1,49 @@
+<!--In the form, add two radio buttons with grouping them for employee type(Salaried and own business -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <script>
+        function handleformsubmit(event){
+            event.preventDefault();
+            let Salaried= document.getElementById("Salaried").value
+            let Own_business= document.getElementById("Own business").value
+           
+            let employeetype ={
+                Salaried,
+                Own_business,
+               
+            };
+            console.log("Employee type:", employeetype);
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Print the Radio Buttons</h1>
+        <p> Employee Type:</p>
+        <form onsubmit = "handleformsubmit(event)">
+            
+            <div>
+                <label> Salaried </label>
+             <input type="radio"
+            id ="name"
+        /> </div>
+     
+<div>
+    <label> Own business </label> <input
+    type="radio"
+id ="name"
+/>
+</div>
+
+<div>
+<button type="submit"> SUBMIT </button>
+</div>
+</form>
+</div>
+
+</body>
+</html>
