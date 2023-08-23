@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./eventform.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="top-container">
+            <div class="header">Event 1</div>
+            <div class="seats"> Number of available seats: 23</div>
+            <div class="bottom-container">
+                <div class=" body-left">
+                    <div class="image">Image</div>  
+            </div>
+            <div class="body-right">
+                <form>
+                    <div>
+                      <label>Name: </label>
+                      <input
+                        id="name"
+                        type="text"
+                        required
+                       
+                      />
+                    </div>
+
+                    <div>
+                        <label>Email: </label>
+                        <input
+                          id="email"
+                          required
+                          type="email"
+                          
+                        />
+                      </div>
+
+                      <div>
+                        <label>Phone No: </label>
+                        <input
+                          id="mobileNumber"
+                          type="number"
+                         
+                        />
+                      </div>
+
+                      <div>
+                        <label>Number of seats: </label>
+                        <input
+                          id="seats"
+                          type="number"
+                          min="0"
+                          max="23"
+                          
+                        />
+                      </div>
+                      <div>
+                        <label>Name of Attendee 2: </label>
+                        <input
+                          id="Attendee"
+                          type="text"
+                        
+                        />
+                      </div>
+
+                      <div class="button">
+                        <button type="submit">SUBMIT</button>
+                        <button type="cancel">CANCEL</button>
+                      </div>
+                    </form>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
