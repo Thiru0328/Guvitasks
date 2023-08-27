@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORM</title>
+   <link rel="stylesheet" href="./form.css" />
+    <script src="./form.js">
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="body" id="body">
+      <div class=" header">ORDER THE FOOD</div>
+      <form onsubmit="handleFormSubmit(event)">
+        <div>
+          <label>Firstname: </label>
+          <input
+            id="name"
+            type="text"
+            minlength="5"
+            maxlength="20"
+            required
+            placeholder="Enter your firstname"
+          />
+        </div>
+
+        <div>
+          <label>Lastname: </label>
+          <input
+            id="name"
+            type="text"
+            minlength="5"
+            maxlength="20"
+            required
+            placeholder="Enter your lastname"
+          />
+        </div>
+
+        <div>
+          <label>Gender</label>
+          <input id="gender" type="text" />
+        </div>
+
+        <div>
+          <label>Address: </label>
+          <input id="address" type="text" placeholder="Enter your address" />
+        </div>
+
+        <div>
+          <label>Mobile Number: </label>
+          <input
+            id="mobileNumber"
+            type="number"
+        
+            placeholder="Enter your mobile number"
+          />
+        </div>
+
+        <div>
+          <label>City </label>
+          <input id="city" type="text" placeholder="Enter your city" />
+        </div>
+        
+        <div>
+          <label>State</label>
+          <input id="state" type="text" placeholder="Enter your state" />
+        </div>
+
+        <div>
+          <label>Country</label>
+          <input id="country" type="text" placeholder="Enter your country" />
+        </div>
+
+        <div>
+          <label>Pincode</label>
+          <input id="pincode" type="text" placeholder="Enter your state" />
+        </div> 
+        <div>
+          <button type="submit">SUBMIT</button>
+          <button type="reset">RESET</button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </body>
+</html>
+
+<!-- FORM -> SUBMIT -> FRONT END -> API -> BACKEND -> DB -->
