@@ -29,3 +29,17 @@ function handleFormSubmit(event) {
 
     console.log("User Details: ", userDetails);
   }
+
+  function submit() {
+    alert("THANK YOU! Your food is ordered");
+  }
+  
+  function handleFormSubmit(event) {
+    getContent();
+  
+    var myContainerElement = document.getElementById("myContainerId");
+      myContainerElement.innerHTML = `${content}`; // REPLACE
+  }
+  //function handleFormSubmit(event){
+    //alert("THANK YOU! Your food is Ordered")
+  //}

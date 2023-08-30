@@ -1,6 +1,9 @@
 function Solve(val) {
-    var v = document.getElementById('res');
-    v.value += val;
+   if(/^[^a-zA-Z]+$/.test(val)){
+      var v = document.getElementById('res');
+      v.value += val;
+   }
+    
  }
  function Result() {
     var num1 = document.getElementById('res').value;
@@ -15,9 +18,5 @@ function Solve(val) {
     var ev = document.getElementById('res');
     ev.value = ev.value.slice(0,-1);
  }
-function res(){
-   if (input===text){
-      alert("only numbers are allowed")
-}
-}
+
  

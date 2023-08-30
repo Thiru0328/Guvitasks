@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="main">
-        <input type="text" id = 'res'>
+        <input type="text" oninput="this.value=this.value.replace(/[a-zA-Z]+$/, '')" id = 'res'>
         <div class="btn">
            <input type="button" value = 'C' onclick = "Clear()">
            <input type="button" value = '%' onclick = "Solve('%')">
